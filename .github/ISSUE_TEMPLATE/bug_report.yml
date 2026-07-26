@@ -1,0 +1,105 @@
+name: Bug Report
+description: Report a bug to help us improve the Ubuntu Cleanup utility.
+title: '[Bug]: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 👋 Thank you for reporting a bug!
+        Please fill out the form below with as much detail as possible to help us identify and resolve the issue.
+  - type: input
+    id: ubuntu_version
+    attributes:
+      label: Ubuntu / Debian Version
+      placeholder: e.g., 22.04.3 LTS
+    validations:
+      required: true
+  - type: input
+    id: bash_version
+    attributes:
+      label: Bash Version
+      placeholder: e.g., 5.1.16(1)-release
+    validations:
+      required: true
+  - type: input
+    id: script_version
+    attributes:
+      label: Script Version
+      placeholder: e.g., 3.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      options:
+        - Local
+        - Development
+        - Staging
+        - Production
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: steps_to_reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Tell us how to reproduce the bug.
+      placeholder: |
+        1. Run `sudo ./modular_cleanup_script.sh`
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual_behavior
+    attributes:
+      label: Actual Behavior
+      description: A clear and concise description of what actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Output
+      description: Please provide any relevant logs or terminal output.
+      render: shell
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      options:
+        - Ubuntu
+        - Debian
+        - Linux Mint
+        - Other (please specify in description)
+    validations:
+      required: true
+  - type: dropdown
+    id: ram
+    attributes:
+      label: RAM
+      options:
+        - 2GB
+        - 4GB
+        - 8GB
+        - 16GB
+        - 32GB+
